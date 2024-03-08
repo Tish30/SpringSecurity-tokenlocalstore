@@ -1,0 +1,55 @@
+<!--&lt;!&ndash;<!DOCTYPE html>&ndash;&gt;-->
+<!--&lt;!&ndash;<html xmlns:th="http://www.thymeleaf.org" lang="en">&ndash;&gt;-->
+<!--&lt;!&ndash;<head>&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta charset="UTF-8">&ndash;&gt;-->
+<!--&lt;!&ndash;    <meta name="viewport" content="width=device-width, initial-scale=1.0">&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>Verify OTP</title>&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash; Bootstrap CSS &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash; Custom CSS &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="../style.css">&ndash;&gt;-->
+<!--&lt;!&ndash;</head>&ndash;&gt;-->
+<!--&lt;!&ndash;<body>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h2>Verify OTP</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;    <form th:action="@{/verifyotp}" method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="mb-3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <label for="otp" class="form-label">Enter OTP</label>&ndash;&gt;-->
+<!--&lt;!&ndash;            <input type="text" id="otp" name="otp" class="form-control" required>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button type="submit" class="btn btn-primary">Verify OTP</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </form>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</body>&ndash;&gt;-->
+<!--&lt;!&ndash;</html>&ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org" lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Verify OTP</title>-->
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    &lt;!&ndash; Custom CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="../style.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <h2>Verify OTP</h2>-->
+<!--    <form th:action="@{/verifyotp}" method="post">-->
+<!--        <div>-->
+<!--            <p th:if="${param.error}" role="alert">Invalid otp Please try again.</p>-->
+<!--            <div th:if="${error}" class="alert alert-danger" role="alert" th:text="${error}"></div>-->
+<!--        </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label for="otp" class="form-label">Enter OTP</label>-->
+<!--            <input type="text" id="otp" name="otp" class="form-control" required>-->
+<!--        </div>-->
+<!--        <input type="hidden" name="email" value="${email}"> &lt;!&ndash; Add this line &ndash;&gt;-->
+<!--        <button type="submit" class="btn btn-primary">Verify OTP</button>-->
+<!--    </form>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+

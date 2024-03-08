@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration success</title>
+
+</head>
+<body>
+<form th:action="@{/api/v1/auth/signup}" method="post">
+    <div class="register-show">
+        <h2>REGISTER</h2>
+        <label>Username:
+            <input type="text" placeholder="Username" name="username">
+        </label>
+        <label>Email:
+            <input type="text" placeholder="Email" name="email">
+        </label>
+        <label>Password:
+            <input type="password" placeholder="Password" name="password">
+        </label>
+        <label>Confirm Password:
+            <input type="password" placeholder="Confirm Password" name="confirmPassword">
+        </label>
+        <label>Location:
+            <input type="text" placeholder="Location" name="location">
+        </label>
+        <button type="submit" value="Register">Register</button>
+        <span class="form-label">Existing user? <a href="/" th:href="@{/api/v1/auth/signin}">Login here</a> </span>
+    </div>
+</form>
+<style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container styles */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: linear-gradient(to bottom right, #8a4ab0, #ff99cc); /* gradient background */
+        }
+
+        form {
+            background-color: rgba(210, 175, 235, 0.9); /* light purple semi-transparent background */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* soft shadow */
+            width: 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        form:hover {
+            transform: translateY(-5px); /* lift the form on hover */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* darker shadow on hover */
+                    }
+
+        /* Form styles */
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4b0082; /* dark purple text color */
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: bold; /* bold text */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            color: #663399; /* medium purple text color */
+            font-size: 16px; /* increased font size */
+            font-weight: bold; /* bold text */
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            background-color: rgba(230, 200, 255, 0.7); /* semi-transparent light purple background */
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            background-color: rgba(230, 200, 255, 0.9); /* lighter semi-transparent light purple background when input is focused */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* subtle shadow on focus */
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(135, 70, 170, 0.9); /* dark purple semi-transparent button background color */
+            color: #ffffff; /* white text color */
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold; /* bold text */
+        }
+
+        button:hover {
+            background-color: rgba(110, 55, 140, 0.9); /* darker semi-transparent button background color on hover */
+        }
+
+
+
+
+</style>
+</body>
+</html>

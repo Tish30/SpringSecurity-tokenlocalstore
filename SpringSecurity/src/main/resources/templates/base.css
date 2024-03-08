@@ -1,0 +1,64 @@
+
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to bottom right, #8a4ab0, #ff99cc);
+            color: #4b0082;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #4b0082;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: black;
+        }
+
+        footer {
+            background: #4b0082;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+

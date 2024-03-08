@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStore - Notification</title>
+    <!--    <link rel="stylesheet" href="styles.css">-->
+</head>
+<body>
+<header th:replace="header::header1">
+
+</header>
+
+
+<section class="hero">
+    <div class="container">
+        <h2>Here you got all notifications about product in few minutes</h2>
+    </div>
+</section>
+
+
+<footer th:replace="footer::footer">
+
+</footer>
+<style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .logo-profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .profile-dropdown {
+        position: relative;
+    }
+
+    .profile-dropdown .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0;
+    }
+
+    .profile-dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .profile-dropdown .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s; /* Add transition for smooth background-color change */
+    }
+
+    .profile-dropdown .dropdown-content a:hover {
+        background-color: #f1f1f1; /* Change background color on hover */
+    }
+
+    header {
+        background: linear-gradient(to bottom right, #8a4ab0, #ff99cc);
+        color: #4b0082;
+    }
+
+    header h1 {
+        float: left;
+        color: #4b0082;
+        font-size: 28px;
+        font-weight: bold;
+        padding-bottom:2px;
+    }
+
+    header nav {
+        float: right;
+        font-size: 25px;
+        font-weight: bold;
+        padding-top: 8px;
+        margin-bottom: 4px;
+    }
+
+    header nav ul {
+        list-style: none;
+    }
+
+    header nav ul li {
+        display: inline;
+        margin-left: 20px;
+    }
+
+    header nav ul li a {
+        color: #4b0082;
+        text-decoration: none;
+        transition: color 0.3s, text-decoration 0.3s; /* Add transition for smooth color and text-decoration change */
+    }
+
+    header nav ul li a:hover {
+        color: black; /* Change color on hover */
+        text-decoration: underline; /* Underline text on hover */
+    }
+
+    /* Dropdown Styles */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .profile-dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+        background: #f4f4f4;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .hero h2 {
+
+        color: #4b0082;
+            background-color: #4CAF50;
+            padding: 12px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+            text-align: center;
+    }
+
+    .hero p {
+        margin-bottom: 40px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: rgba(135, 70, 170, 0.9);
+        color: #ffffff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .features {
+        padding: 50px 0;
+    }
+
+    .features h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #4b0082;
+    }
+
+    .feature {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .feature h4 {
+        margin-bottom: 10px;
+        color: #4b0082;
+    }
+</style>
+</body>
+</html>

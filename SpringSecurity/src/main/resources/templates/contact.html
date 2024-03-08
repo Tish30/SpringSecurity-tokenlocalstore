@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LocalStore</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+
+
+  /* Contact Form Styles */
+    .contact-form {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #4b0082;
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 13px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Align items horizontally */
+}
+
+
+    .contact-form p {
+        margin-bottom: 20px;
+    }
+
+    .contact-form form {
+        transition: transform 0.3s; /* Add transition effect */
+    }
+
+
+    .form-box {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 60%; /* Decrease width of form */
+        margin: auto; /* Center form */
+    }
+
+    .contact-form .form-group {
+        margin-bottom: 15px;
+    }
+
+    .contact-form .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #4b0082;
+        text-align: left; /* Align field names to the left */
+    }
+
+    .contact-form .form-group input[type="text"],
+    .contact-form .form-group input[type="email"],
+    .contact-form .form-group textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .contact-form .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .contact-form .form-group button {
+        background-color: #4b0082;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+   .contact-form .form-group button {
+    background-color: #4b0082;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: background-color 0.3s;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Ensure the button takes the full width */
+}
+
+    </style>
+
+
+</head>
+<body>
+<header th:replace="header::header1">
+
+</header>
+
+<section class="contact-form">
+    <div class="container">
+        <div class="form-box">
+            <h2>Contact Us</h2>
+            <p>Have a question or feedback? Fill out the form below to get in touch with us.</p>
+            <form action="submit_contact_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<footer th:replace="footer::footer1">
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - LocalStore</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+
+<header th:fragment="header1" style="background: linear-gradient(to bottom right, #8a4ab0, #ff99cc); color: #4b0082;padding: 15px 0; text-align: center;">
+    <div class="container">
+                <h1 style="float: left; color: #4b0082; font-size: 30px; font-weight: bold;">LocalStore</h1>
+                <nav style="float: right; font-size: 25px; font-weight: bold; padding-top: 8px; margin-bottom: 4px;">
+                    <ul style="list-style: none;">
+                        <li style="display: inline; margin-left: 20px;"><a href="#" th:href="@{/api/v1/auth/home}" style="color: #4b0082; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#4b0082'" >Home</a></li>
+                        <li style="display: inline; margin-left: 20px;"><a href="#" th:href="@{/api/v1/auth/product}" style="color: #4b0082; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#4b0082'">Products</a></li>
+                        <li style="display: inline; margin-left: 20px;"><a href="#" style="color: #4b0082; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#4b0082'">About Us</a></li>
+                        <li style="display: inline; margin-left: 20px;"><a href="#" th:href="@{/api/v1/auth/contact}" style="color: #4b0082; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#4b0082'">Contact</a></li>
+                        <li style="display: inline; margin-left: 20px;"><a href="#" th:href="@{/api/v1/auth/notification}" style="color: #4b0082; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#4b0082'">Notification</a></li>
+                        <li style="display: inline; margin-left: 20px;"><a href="#" style="color: #4b0082; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='#4b0082'">Profile</a></li>
+                    </ul>
+                </nav>
+    </div>
+</header>
+
+</body>
+</html>
